@@ -51,7 +51,7 @@ public class ReceivedInformation extends BasePage {
     private void uploadPicture() throws InterruptedException {
         WebElement getPicture = DriverSingleton.getDriverInstance().findElement(By.id("ember2377"));
         Thread.sleep(5000);
-        getPicture.sendKeys("C:\\Users\\SARA\\Desktop\\automation\\purim.png");
+        getPicture.sendKeys("C:\\Users\\Owner\\Desktop\\automation\\purim.png");
         Thread.sleep(15000);
     }
 
