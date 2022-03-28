@@ -49,10 +49,10 @@ public class ReceivedInformation extends BasePage {
 
     //העלאת תמונה
     private void uploadPicture() throws InterruptedException {
-        WebElement getPicture = DriverSingleton.getDriverInstance().findElement(By.id("ember2377"));
+        WebElement getPicture = DriverSingleton.getDriverInstance().findElement(By.id("ember2378"));
         Thread.sleep(5000);
-        getPicture.sendKeys("C:\\Users\\Owner\\Desktop\\automation\\purim.png");
-        Thread.sleep(15000);
+        getPicture.sendKeys("C:\\Users\\Owner\\Desktop\\automation\\purim.PNG");
+        Thread.sleep(30000);
     }
 
     //כפתור המשך

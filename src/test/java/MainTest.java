@@ -19,8 +19,8 @@ import java.time.Duration;
 import java.util.Date;
 
 public class MainTest {
-    private static ExtentReports extent = new ExtentReports();
-    private static ExtentTest test = extent.createTest("MyFirstTest", "Sample description");
+    private static ExtentReports extent;
+    private static ExtentTest test;
 
     @BeforeClass
     public void beforeAll() {
