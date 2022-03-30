@@ -24,7 +24,8 @@ public class MainTest {
 
     @BeforeClass
     public void beforeAll() {
-        DriverSingleton.getDriverInstance().get("https://buyme.co.il/");
+        String url = BasePage.getData("URL");
+        DriverSingleton.getDriverInstance().get(url);
         DriverSingleton.getDriverInstance().manage().window().maximize();
         DriverSingleton.getDriverInstance().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         DriverSingleton.getDriverInstance().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

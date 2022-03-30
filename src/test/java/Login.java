@@ -21,7 +21,7 @@ public class Login extends BasePage {
 
     private void enterDetails() {
         //הכנס שם
-        sendKeysToElement(By.xpath("/html/body/div[3]/div/div[1]/div/div/div[3]/div[2]/div[3]/form/div[1]/label/input"),Constant.name);
+        sendKeysToElement(By.xpath("/html/body/div[1]/div/div[1]/div/div/div[3]/div[2]/div[3]/form/div[1]/label/input"),Constant.name);
         String findName = DriverSingleton.getDriverInstance().findElement(By.xpath("/html/body/div[3]/div/div[1]/div/div/div[3]/div[2]/div[3]/form/div[1]/label/input")).getAttribute("value");
         Assert.assertEquals(Constant.name, findName);
         //הכנס מייל

@@ -7,11 +7,16 @@ public class DriverSingleton {
     private static WebDriver driver;
 
     public static WebDriver getDriverInstance() {
+        String type = BasePage.getData("browserType");
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\Owner\\Desktop\\automation\\ChromeDriver.exe");
-            driver = new ChromeDriver();
+            if (type.equals("Chrome")) {
+                System.setProperty("webdriver.chrome.driver", Constant.CHROMEDRIVER_PATH);
+                driver = new ChromeDriver();
+            } /*else if (type.equals("Edge")) {
+                System.setProperty("webdriver.edge.driver", Constant.EDGEDRIVER_PATH);
+                driver = new EdgeDriver();
+            }*/
         }
-
         return driver;
     }
 }
