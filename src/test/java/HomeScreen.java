@@ -38,7 +38,7 @@ public class HomeScreen extends BasePage {
     //בחר קטגוריה
     private void category() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(getWebElement(By.cssSelector("span[alt=קטגוריה]"))));
-       clickElement(By.cssSelector("span[alt=קטגוריה]"));
+        clickElement(By.cssSelector("span[alt=קטגוריה]"));
         wait.until(ExpectedConditions.elementToBeClickable(By.id("ember1160")));
         clickElement(By.id("ember1160"));
     }

@@ -44,7 +44,7 @@ public class ReceivedInformation extends BasePage {
     //הכנס ברכה
     private void blessing() {
         clearElement(By.className("parsley-success"));
-       sendKeysToElement(By.className("parsley-success"),("ברכות ליום הולדתך ה25"));
+        sendKeysToElement(By.className("parsley-success"), ("ברכות ליום הולדתך ה25"));
     }
 
     //העלאת תמונה

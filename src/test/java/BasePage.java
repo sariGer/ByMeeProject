@@ -21,10 +21,12 @@ public class BasePage {
     public void clearElement(By locator) {
         getWebElement(locator).clear();
     }
+
     public WebElement getWebElement(By locator) {
         return DriverSingleton.getDriverInstance().findElement(locator);
 
     }
+
     public static String getData(String keyName) {
         //פונקציה להבאת DATA מהקובץ XML
         ClassLoader classLoader = DriverSingleton.class.getClassLoader();

@@ -25,7 +25,7 @@ public class SendInformation extends BasePage {
     }
 
     //לחץ על מייל
-    private void pickEmail(){
+    private void pickEmail() {
         wait.until(ExpectedConditions.elementToBeClickable(getWebElement(By.cssSelector("svg[gtm=method-email]"))));
         clickElement(By.cssSelector("svg[gtm=method-email]"));
     }
@@ -38,15 +38,15 @@ public class SendInformation extends BasePage {
     //השוואה של שם השולח
     private void assertSenderName() {
         clearElement(By.xpath("/html/body/div[3]/div/div/div[3]/div/div/div[1]/form/div[3]/div[2]/label/input"));
-        sendKeysToElement(By.xpath("/html/body/div[3]/div/div/div[3]/div/div/div[1]/form/div[3]/div[2]/label/input"),(Constant.name));
+        sendKeysToElement(By.xpath("/html/body/div[3]/div/div/div[3]/div/div/div[1]/form/div[3]/div[2]/label/input"), (Constant.name));
         String senderName = DriverSingleton.getDriverInstance().findElement(By.xpath("/html/body/div[3]/div/div/div[3]/div/div/div[1]/form/div[3]/div[2]/label/input")).getAttribute("value");
         Assert.assertEquals(senderName, Constant.name);
     }
 
     //המשך לתשלום
     private void continueToPayment() {
-        wait.until(ExpectedConditions.elementToBeClickable(getWebElement(By.id("ember2526"))));
-        clickElement(By.id("ember2526"));
+        wait.until(ExpectedConditions.elementToBeClickable(getWebElement(By.className("bm-btn"))));
+        clickElement(By.className("bm-btn"));
     }
 
 }

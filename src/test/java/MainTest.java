@@ -38,12 +38,6 @@ public class MainTest {
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         test = extent.createTest("first report", "sample description");
-        //ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C://Users//extent.html");
-        //extent.attachReporter(htmlReporter);
-        //test.log(Status.INFO, "before test method");
-
-        //screenshot
-        //  test.pass("details", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot(driver, "picName")).build());
     }
 
     @Test
@@ -52,7 +46,6 @@ public class MainTest {
         try {
             String byMeeURL = "https://buyme.co.il/";
             Assert.assertEquals(byMeeURL, DriverSingleton.getDriverInstance().getCurrentUrl());
-            //  test.pass("details", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot(timeNow)).build());
         } catch (Exception e) {
             e.printStackTrace();
             test.log(Status.FAIL, "Translate box was not clicked " + e.getMessage());
